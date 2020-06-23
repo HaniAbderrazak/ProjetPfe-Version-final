@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <partial name="_Head"/>
+    @RenderSection("Imports", required: false)
+</head>
+<body id="app-container" class="menu-default show-spinner">
+   
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1>Web Client</h1>
+                <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+                    <ol class="breadcrumb pt-0">
+                        @RenderSection("BreadCrumb", required: false)
+                    </ol>
+                </nav>
+                <div class="separator mb-5"></div>
+            </div>
+        </div>
+        @RenderBody()
+    </div>
+</main>
+
+<partial name="_PageFooter"/>
+<partial name="_ScriptsPartial"/>
+<partial name="_ValidationScriptsPartial"/>
+@RenderSection("Scripts", required: false)
+</body>
+</html>

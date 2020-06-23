@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "UserClaims";
+}
+
+<h1>UserClaims</h1>
+
+
+
+<h2>Claims</h2>
+
+<dl>
+    @foreach (var claim in User.Claims)
+    {
+        <dt>@claim.Type</dt>
+        <dd>@claim.Value</dd>
+    }
+</dl>
+<br />
+<a asp-controller="Home" asp-action="Index"> return to Home Page </a>
+<br>
+@if (User.Identity.IsAuthenticated)
+{
+    <br />
+    <a asp-controller="Account" asp-action="SignedOut" class="icon-menu-item">Logout</a>
+}
+
+@*<dl>
+        @foreach (var prop in (await Context.AuthenticateAsync()).Properties.Items)
+        {
+            <dt>@prop.Key</dt>
+            <dd>@prop.Value</dd>
+        }
+    </dl>*@
