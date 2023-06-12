@@ -7,3 +7,6 @@ les ressources, les utilisateurs et les rôles.
 
 Avec Identity Server 4, vous pouvez créer et gérer des applications clientes, configurer des protocoles d'authentification tels que OAuth 2.0 et OpenID Connect, 
 définir des autorisations granulaires pour les ressources protégées, et fournir une expérience d'authentification centralisée et sécurisée pour vos utilisateurs.
+
+et d'une application client de gestion de photos avec asp.net pour tester le gestion de roles et l'authorisations 
+
